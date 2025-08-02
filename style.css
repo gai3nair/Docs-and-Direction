@@ -105,7 +105,7 @@ details summary::before {
 
 summary {
   font-size: 1.2em;
-  cursor: pointer;
+  cursor: none;
   color: #c44569;
   font-family: 'Comic Neue', cursive;
 }

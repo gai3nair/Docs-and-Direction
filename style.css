@@ -3,12 +3,12 @@
 
 body {
   font-family: 'Comic Neue', cursive;
-  background-color: #fdfdfd;
+  background-color: #FCD5CE; /* Soft peachy-pink */
   color: #333;
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
 }
+
 
 .container {
   max-width: 800px;

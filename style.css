@@ -16,6 +16,32 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
+.centered-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full viewport height */
+  background-color: #2c3e50; /* optional: dark background */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.centered-title h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.centered-title blockquote {
+  font-style: italic;
+  font-size: 1.2em;
+  border-left: none;
+  padding: 0 20px;
+  max-width: 600px;
+  color: #fcd5ce; /* soft peach tone */
+}
+
 header {
   background-color: #2c3e50;
   color: white;
@@ -61,7 +87,7 @@ p, li {
 blockquote {
   font-style: italic;
   color: #666;
-  border-left: 4px solid #ccc;
+  border-left: none;
   padding-left: 15px;
   margin: 30px 0;
 }

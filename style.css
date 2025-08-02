@@ -93,26 +93,39 @@ details {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-details[open] summary {
-  content: " ";
-}
-
-summary:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-details summary {
-  content: " ";
-  font-weight: bold;
-  margin-right: 5px;
-}
-
-summary {
+/* Style the <summary> */
+details.collapsible summary {
   font-size: 1.2em;
-  cursor: none;
-  color: #c44569;
+  cursor: pointer;
   font-family: 'Comic Neue', cursive;
+  color: #c44569;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  outline: none;
+  user-select: none;
+}
+
+/* Hide default marker (arrow) */
+details.collapsible summary::-webkit-details-marker {
+  display: none;
+}
+details.collapsible summary::marker {
+  display: none;
+}
+
+/* Animate the content */
+details.collapsible .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+/* When open, animate to full height */
+details.collapsible[open] .content {
+  max-height: 1000px; /* adjust based on expected content */
+  opacity: 1;
 }
 
 ul {

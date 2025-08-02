@@ -93,7 +93,7 @@ details {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-details[open] summary::same {
+details[open] summary::first-line {
   content: " ";
 }
 
@@ -102,7 +102,7 @@ summary:hover {
   cursor: pointer;
 }
 
-details summary::same {
+details summary::first-line {
   content: " ";
   font-weight: bold;
   margin-right: 5px;

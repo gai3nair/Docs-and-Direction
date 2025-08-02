@@ -94,11 +94,11 @@ details {
 }
 
 details[open] summary::before {
-  content: "▼ ";
+  content: " ";
 }
 
 details summary::before {
-  content: "▶ ";
+  content: " ";
   font-weight: bold;
   margin-right: 5px;
 }

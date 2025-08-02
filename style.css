@@ -84,6 +84,43 @@ blockquote {
   text-align: center;
 }
 
+details {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+details[open] summary::before {
+  content: "▼ ";
+}
+
+details summary::before {
+  content: "▶ ";
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+summary {
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #c44569;
+  font-family: 'Comic Neue', cursive;
+}
+
+summary:hover {
+  text-decoration: underline;
+}
+
+ul {
+  margin-top: 15px;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+
 .year {
   font-weight: bold;
   color: #c44569;

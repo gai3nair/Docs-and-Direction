@@ -280,7 +280,7 @@ details.disclosure[open] .chev { transform: rotate(0deg); }
 
 /* Tunables */
 :root {
-  --carousel-max: 860px;     /* visible width of the carousel track */
+  --carousel-max: 800px;     /* visible width of the carousel track */
   --carousel-gutter: 16px;   /* inner left/right padding inside the track */
   --arrow-size: 36px;        /* arrow button size */
   --arrow-gap: 10px;         /* space between arrows and track */
@@ -336,7 +336,7 @@ details.disclosure[open] .chev { transform: rotate(0deg); }
 
 /* Arrow buttons stay clearly visible */
 .carousel-nav {
-  border: 1px solid rgba(0,0,0,0.12);
+  border: 2px solid rgba(0,0,0,0.12);
   background: #fff;
   width: var(--arrow-size);
   height: var(--arrow-size);

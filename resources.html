@@ -143,14 +143,14 @@
   <footer>© 2025 Docs and Direction. Built with clarity and caffeine.</footer>
 
   <script>
-    // Carousel scroll (only applies if you use the carousel option)
-    const c = document.getElementById('booksCarousel');
-    document.querySelector('.books-carousel-wrapper .prev')?.addEventListener('click', () => {
-      if (!c) return; c.scrollBy({ left: -c.clientWidth, behavior: 'smooth' });
-    });
-    document.querySelector('.books-carousel-wrapper .next')?.addEventListener('click', () => {
-      if (!c) return; c.scrollBy({ left: c.clientWidth, behavior: 'smooth' });
-    });
-  </script>
+  const c = document.getElementById('booksCarousel');
+  document.querySelector('.books-carousel-wrapper .prev')?.addEventListener('click', () => {
+    if (!c) return; c.scrollBy({ left: -c.clientWidth, behavior: 'smooth' });
+  });
+  document.querySelector('.books-carousel-wrapper .next')?.addEventListener('click', () => {
+    if (!c) return; c.scrollBy({ left: c.clientWidth, behavior: 'smooth' });
+  });
+</script>
+
 </body>
 </html>

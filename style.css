@@ -358,5 +358,19 @@ details.disclosure[open] .chev { transform: rotate(0deg); }
   :root { --carousel-gutter: 10px; }
 }
 
+/* Bulleted lists inside resource sections */
+.bulleted {
+  list-style: disc outside;
+  padding-left: 1.25rem; /* ~20px indent */
+  margin: 8px 0 0 0;
+}
+.bulleted li { margin: 6px 0; }
+.bulleted a {
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(0,0,0,0.25);
+}
+.bulleted a:hover { border-bottom-style: solid; }
+
+
 
 

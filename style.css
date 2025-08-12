@@ -278,54 +278,85 @@ details.disclosure[open] .chev { transform: rotate(0deg); }
   gap: 10px;
 }
 
-/* One-up book carousel */
+/* Tunables */
+:root {
+  --carousel-max: 860px;     /* visible width of the carousel track */
+  --carousel-gutter: 16px;   /* inner left/right padding inside the track */
+  --arrow-size: 36px;        /* arrow button size */
+  --arrow-gap: 10px;         /* space between arrows and track */
+}
+
+/* Wrapper keeps arrows + track centered */
 .books-carousel-wrapper {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;      /* centers the whole unit */
+  gap: var(--arrow-gap);
   margin: 8px 0 6px;
 }
 
+/* Show one card per view, but constrain the track width */
 .books-carousel {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  /* show exactly one card per viewport */
-  gap: 0;          /* important: no gap between cards */
-  padding: 0;      /* important: no side padding */
+
+  /* exactly one card visible, with comfy side gutters */
+  width: min(100%, var(--carousel-max));
+  gap: 0;
+  padding-inline: var(--carousel-gutter);
+  scroll-padding-inline: var(--carousel-gutter);
+
   scrollbar-width: none;
 }
 .books-carousel::-webkit-scrollbar { display: none; }
 
-/* each card takes 100% of the visible width */
+/* Each book fills the track width (minus the padding above) */
 .book-card {
   flex: 0 0 100%;
   max-width: 100%;
   scroll-snap-align: start;
+
   background: #ffffff;
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 16px;
   box-shadow: 0 10px 24px rgba(0,0,0,0.08);
   padding: 16px 18px;
+  box-sizing: border-box;        /* prevents any clipping at edges */
 }
 
-/* keep text readable on large screens without changing your HTML */
+/* Comfortable line length on wide screens */
 .book-card > * {
-  max-width: 70ch;            /* comfortable line length */
+  max-width: 70ch;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Arrow buttons stay clearly visible */
 .carousel-nav {
   border: 1px solid rgba(0,0,0,0.12);
   background: #fff;
-  width: 32px;
-  height: 32px;
+  width: var(--arrow-size);
+  height: var(--arrow-size);
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   cursor: pointer;
 }
+
+/* Slightly larger arrows on roomy viewports */
+@media (min-width: 900px) {
+  :root {
+    --arrow-size: 40px;
+    --carousel-max: 900px;   /* feel free to bump to 960px if you prefer */
+  }
+}
+
+/* Tighten gutters on very small screens */
+@media (max-width: 520px) {
+  :root { --carousel-gutter: 10px; }
+}
+
 
 

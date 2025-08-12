@@ -28,93 +28,158 @@
     <details id="books" class="disclosure" open>
       <summary><span class="chev" aria-hidden="true"></span>Books I Recommend</summary>
 
-      <!--<!-- OPTION A: Collapsible per book (keep this OR the carousel below) -->
-     <!-- <section class="books-collapsible">
-        <details class="book-disclosure" open>
-          <summary><span class="chev" aria-hidden="true"></span>Docs Like Code (Anne Gentle)</summary>
-          <div class="resource-inner">
-            <p><strong>What it offers:</strong> A practical playbook for treating documentation like software. It shows how version control, branching, reviews, CI, and automated checks make docs faster to ship and easier to maintain. The examples come from real teams moving from wiki or word processor workflows to a docs-as-code pipeline.</p>
-            <p><strong>What to expect:</strong></p>
-            <ul class="list-clean">
-              <li>Setting up a git-based doc workflow and bringing engineers into reviews</li>
-              <li>Static site generators, build pipelines, and checks for links and style</li>
-              <li>Rollout tips for change management and contributor onboarding</li>
-            </ul>
-            <p><em>Best for:</em> Technical writers, doc leads, and engineers starting a docs-as-code journey.</p>
-          </div>
-        </details>
-
-        <details class="book-disclosure">
-          <summary><span class="chev" aria-hidden="true"></span>The Product is Docs (Christopher Gales and the Splunk Documentation Team)</summary>
-          <div class="resource-inner">
-            <p><strong>What it offers:</strong> Essays from a high-performing docs org on running documentation as a product. It covers hiring, team structure, content strategy, stakeholder management, SLAs, release readiness, quality, and metrics. The tone is candid and operational, which makes it easy to apply in real teams.</p>
-            <p><strong>What to expect:</strong></p>
-            <ul class="list-clean">
-              <li>Frameworks for planning, prioritization, and measuring impact</li>
-              <li>Career ladders, roles, and collaboration models with PM and Engineering</li>
-              <li>Patterns for voice, IA, and release gates that keep docs shippable</li>
-            </ul>
-            <p><em>Best for:</em> Leads and managers who need scalable practices, and ICs curious about how strong doc orgs operate.</p>
-          </div>
-        </details>
-
-        <details class="book-disclosure">
-          <summary><span class="chev" aria-hidden="true"></span>Docs for Developers: An Engineer’s Field Guide to Technical Writing (Jared Bhatti, Zachary Sarah Corleissen, Jen Lambourne, David Nunez, Heidi Waterhouse)</summary>
-          <div class="resource-inner">
-            <p><strong>What it offers:</strong> An engineer-friendly guide to creating developer documentation that users can follow. It breaks down doc types, audience analysis, API and tutorial patterns, sample code practices, and review workflows. The checklists and examples are concrete and easy to reuse.</p>
-            <p><strong>What to expect:</strong></p>
-            <ul class="list-clean">
-              <li>How to structure tutorials, how-to guides, concepts, and references</li>
-              <li>Techniques for clear code samples, error messaging, and troubleshooting</li>
-              <li>Editorial checklists, contribution models, and ways to gather feedback</li>
-            </ul>
-            <p><em>Best for:</em> Engineers who write, and technical writers partnering with dev teams on APIs and SDKs.</p>
-          </div>
-        </details>
-      </section> -->
-
-      <!-- OPTION B: Carousel of book cards (use this instead of the collapsible section above) -->
+            <!-- OPTION B: Carousel of book cards (use this instead of the collapsible section above) -->
       
-      <section class="books-carousel-wrapper" aria-label="Book recommendations">
-        <button class="carousel-nav prev" aria-label="Scroll left" type="button">‹</button>
-        <div class="books-carousel" id="booksCarousel">
-          <article class="book-card">
-            <h3>Docs Like Code</h3>
-            <p class="byline">Anne Gentle</p>
-            <p><strong>What it offers:</strong> Treat docs like software with git, reviews, CI, and automated checks, so teams ship faster and maintain quality.</p>
-            <ul class="list-clean">
-              <li>Git-based doc workflow and engineer reviews</li>
-              <li>Static site generators and CI checks</li>
-              <li>Change management and contributor onboarding</li>
-            </ul>
-          </article>
+      <!-- ========== BOOKS (split by category) ========== -->
+<details id="books" class="disclosure" open>
+  <summary><span class="chev" aria-hidden="true"></span>Books I Recommend</summary>
 
-          <article class="book-card">
-            <h3>The Product is Docs</h3>
-            <p class="byline">Christopher Gales and the Splunk Documentation Team</p>
-            <p><strong>What it offers:</strong> How to run docs as a product with hiring, structure, strategy, SLAs, quality, and metrics that scale.</p>
-            <ul class="list-clean">
-              <li>Planning frameworks and impact metrics</li>
-              <li>Roles, ladders, and PM/Engineering collaboration</li>
-              <li>Voice, IA, and release gates for shippable docs</li>
-            </ul>
-          </article>
+  <!-- TECHNICAL WRITING -->
+  <details class="disclosure" open>
+    <summary><span class="chev" aria-hidden="true"></span>Technical Writing</summary>
 
-          <article class="book-card">
-            <h3>Docs for Developers</h3>
-            <p class="byline">Bhatti, Corleissen, Lambourne, Nunez, Waterhouse</p>
-            <p><strong>What it offers:</strong> Practical patterns for developer docs, from doc types to API tutorials, code samples, and review workflows.</p>
-            <ul class="list-clean">
-              <li>Structure for tutorials, how-to, concepts, reference</li>
-              <li>Clear code samples and troubleshooting</li>
-              <li>Checklists, contribution models, and feedback loops</li>
-            </ul>
-          </article>
-        </div>
-        <button class="carousel-nav next" aria-label="Scroll right" type="button">›</button>
-      </section>
-      
-    </details>
+    <section class="books-carousel-wrapper" aria-label="Technical writing books">
+      <button class="carousel-nav prev" aria-label="Scroll left" type="button">‹</button>
+      <div class="books-carousel" id="booksCarouselTech">
+        <article class="book-card">
+          <h3>Docs Like Code</h3>
+          <p class="byline">Anne Gentle</p>
+          <p><strong>What it offers:</strong> A practical playbook for treating documentation like software. It shows how version control, reviews, CI, and automated checks help teams ship faster and maintain quality.</p>
+          <ul class="list-clean">
+            <li>Git-based doc workflow and engineer reviews</li>
+            <li>Static site generators and CI checks for links and style</li>
+            <li>Change management and contributor onboarding tips</li>
+          </ul>
+        </article>
+
+        <article class="book-card">
+          <h3>The Product is Docs</h3>
+          <p class="byline">Christopher Gales and the Splunk Documentation Team</p>
+          <p><strong>What it offers:</strong> How to run documentation as a product. Hiring, team structure, content strategy, SLAs, release readiness, quality, and metrics that scale.</p>
+          <ul class="list-clean">
+            <li>Planning frameworks and impact metrics</li>
+            <li>Roles, ladders, and PM/Engineering collaboration</li>
+            <li>Voice, IA, and release gates for shippable docs</li>
+          </ul>
+        </article>
+
+        <article class="book-card">
+          <h3>Docs for Developers</h3>
+          <p class="byline">Jared Bhatti, Zachary Sarah Corleissen, Jen Lambourne, David Nunez, Heidi Waterhouse</p>
+          <p><strong>What it offers:</strong> Engineer-friendly patterns for developer docs. Doc types, API guides, code samples, and review workflows with reusable checklists.</p>
+          <ul class="list-clean">
+            <li>Structure for tutorials, how-to, concepts, reference</li>
+            <li>Clear code samples and troubleshooting techniques</li>
+            <li>Editorial checklists and feedback loops</li>
+          </ul>
+        </article>
+      </div>
+      <button class="carousel-nav next" aria-label="Scroll right" type="button">›</button>
+    </section>
+  </details>
+
+  <!-- LEADERSHIP -->
+  <details class="disclosure">
+    <summary><span class="chev" aria-hidden="true"></span>Leadership</summary>
+
+    <section class="books-carousel-wrapper" aria-label="Leadership books">
+      <button class="carousel-nav prev" aria-label="Scroll left" type="button">‹</button>
+      <div class="books-carousel" id="booksCarouselLead">
+        <article class="book-card">
+          <h3>Start With Why</h3>
+          <p class="byline">Simon Sinek</p>
+          <p><strong>What it offers:</strong> A simple model for purpose-driven leadership. When teams know the “why,” they align better, make clearer decisions, and build trust with users and employees.</p>
+          <ul class="list-clean">
+            <li>The Golden Circle: Why → How → What</li>
+            <li>Finding and communicating your “why” consistently</li>
+            <li>Why inspiration beats short-term manipulation</li>
+          </ul>
+        </article>
+
+        <article class="book-card">
+          <h3>Leaders Eat Last</h3>
+          <p class="byline">Simon Sinek</p>
+          <p><strong>What it offers:</strong> How to build trust and safety so people do their best work. The leader’s job is to create the conditions where cooperation and courage can thrive.</p>
+          <ul class="list-clean">
+            <li>“Circle of Safety” and why culture beats rules</li>
+            <li>Stress, incentives, and the chemistry of trust</li>
+            <li>Practical habits that protect people during change</li>
+          </ul>
+        </article>
+
+        <!-- If you meant Jocko Willink & Leif Babin -->
+        <article class="book-card">
+          <h3>Extreme Ownership</h3>
+          <p class="byline">Jocko Willink and Leif Babin</p>
+          <p><strong>What it offers:</strong> Navy SEAL leadership principles that transfer to teams and products. Leaders take total responsibility and build disciplined, decentralized teams.</p>
+          <ul class="list-clean">
+            <li>Cover and Move, Simple, Prioritize and Execute</li>
+            <li>Decentralized Command and clear commander’s intent</li>
+            <li>Own the outcome, fix the process, win as one team</li>
+          </ul>
+        </article>
+
+        <!-- If you meant Steve Farber -->
+        <article class="book-card">
+          <h3>The Radical Leap: A Personal Lesson in Extreme Leadership</h3>
+          <p class="byline">Steve Farber</p>
+          <p><strong>What it offers:</strong> A narrative fable that frames leadership as a practice of Love, Energy, Audacity, and Proof (LEAP). Warmer and more personal than a typical business book.</p>
+          <ul class="list-clean">
+            <li>Lead with love and positive energy</li>
+            <li>Take audacious action and show proof through results</li>
+            <li>Reflection prompts and simple exercises</li>
+          </ul>
+        </article>
+      </div>
+      <button class="carousel-nav next" aria-label="Scroll right" type="button">›</button>
+    </section>
+  </details>
+
+  <!-- GENERAL -->
+  <details class="disclosure">
+    <summary><span class="chev" aria-hidden="true"></span>General</summary>
+
+    <section class="books-carousel-wrapper" aria-label="General books">
+      <button class="carousel-nav prev" aria-label="Scroll left" type="button">‹</button>
+      <div class="books-carousel" id="booksCarouselGen">
+        <article class="book-card">
+          <h3>Ikigai</h3>
+          <p class="byline">Héctor García and Francesc Miralles</p>
+          <p><strong>What it offers:</strong> A gentle guide to finding a sustainable sense of purpose. Blends research on longevity with everyday habits from Okinawa.</p>
+          <ul class="list-clean">
+            <li>Find your ikigai at the intersection of what you love, are good at, the world needs, and what you can be paid for</li>
+            <li>Small joys, flow, community, movement, and simple food</li>
+            <li>Anti-hurry mindset and meaningful routines</li>
+          </ul>
+        </article>
+
+        <article class="book-card">
+          <h3>Eat That Frog!</h3>
+          <p class="byline">Brian Tracy</p>
+          <p><strong>What it offers:</strong> A punchy system for beating procrastination by tackling the hardest, highest-value task first.</p>
+          <ul class="list-clean">
+            <li>Plan your day, pick the “frog,” and start immediately</li>
+            <li>ABCDE prioritization, batching, and time blocks</li>
+            <li>Cut low-value tasks and distractions</li>
+          </ul>
+        </article>
+
+        <article class="book-card">
+          <h3>The 7 Habits of Highly Effective People</h3>
+          <p class="byline">Stephen R. Covey</p>
+          <p><strong>What it offers:</strong> A values-based framework for personal and interpersonal effectiveness.</p>
+          <ul class="list-clean">
+            <li>Be Proactive; Begin With the End in Mind; Put First Things First</li>
+            <li>Think Win-Win; Seek First to Understand, Then to Be Understood</li>
+            <li>Synergize; Sharpen the Saw</li>
+          </ul>
+        </article>
+      </div>
+      <button class="carousel-nav next" aria-label="Scroll right" type="button">›</button>
+    </section>
+  </details>
+</details>
+
 
     <!-- Blogs & Newsletters -->
 <details id="blogs" class="disclosure">
@@ -148,14 +213,20 @@
   <footer>© 2025 Docs and Direction. Built with clarity and caffeine.</footer>
 
   <script>
-  const c = document.getElementById('booksCarousel');
-  document.querySelector('.books-carousel-wrapper .prev')?.addEventListener('click', () => {
-    if (!c) return; c.scrollBy({ left: -c.clientWidth, behavior: 'smooth' });
-  });
-  document.querySelector('.books-carousel-wrapper .next')?.addEventListener('click', () => {
-    if (!c) return; c.scrollBy({ left: c.clientWidth, behavior: 'smooth' });
+  document.querySelectorAll('.books-carousel-wrapper').forEach(wrapper => {
+    const track = wrapper.querySelector('.books-carousel');
+    const prev = wrapper.querySelector('.prev');
+    const next = wrapper.querySelector('.next');
+    if (!track) return;
+
+    const scrollOne = dir => {
+      track.scrollBy({ left: dir * track.clientWidth, behavior: 'smooth' });
+    };
+    prev?.addEventListener('click', () => scrollOne(-1));
+    next?.addEventListener('click', () => scrollOne(1));
   });
 </script>
+
 
 </body>
 </html>

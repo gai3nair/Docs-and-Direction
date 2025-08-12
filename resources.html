@@ -5,66 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Docs and Direction — Resources</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Minimal styles for collapsible cards and clean lists -->
-  <style>
-    html { scroll-behavior: smooth; }
-
-    /* Collapsible soft cards */
-    details.disclosure {
-      background: #ffffff;
-      border: 1px solid rgba(0,0,0,0.06);
-      border-radius: 16px;
-      margin: 16px 0;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-      overflow: hidden;
-    }
-    details.disclosure > summary {
-      list-style: none;
-      padding: 16px 20px;
-      cursor: pointer;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      user-select: none;
-    }
-    details.disclosure > summary::-webkit-details-marker { display: none; }
-
-    /* Chevron */
-    details.disclosure .chev {
-      width: 12px; height: 12px; display: inline-block; background: currentColor;
-      -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.12 9.29L12 13.17l3.88-3.88L17.3 10.7 12 16l-5.3-5.3z"/></svg>') no-repeat center / contain;
-              mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.12 9.29L12 13.17l3.88-3.88L17.3 10.7 12 16l-5.3-5.3z"/></svg>') no-repeat center / contain;
-      transform: rotate(-90deg);
-      transition: transform .2s ease;
-    }
-    details.disclosure[open] .chev { transform: rotate(0deg); }
-
-    .resource-inner { padding: 0 20px 16px 20px; }
-    .resource-inner + .resource-inner {
-      border-top: 1px dashed rgba(0,0,0,0.12);
-      padding-top: 16px;
-    }
-
-    /* Clean lists (no bullets) */
-    .list-clean { list-style: none; padding-left: 0; margin: 8px 0; }
-    .list-clean li { margin: 6px 0; }
-
-    /* Inline link list items */
-    .link-list { margin: 0; }
-    .link-list p { margin: 6px 0; }
-
-    /* Back to top */
-    .back-top { text-align: right; margin: 18px 0 28px; }
-    .back-top a {
-      text-decoration: none; border-bottom: 1px dashed rgba(0,0,0,0.25);
-    }
-    .back-top a:hover { border-bottom-style: solid; }
-
-    /* Ensure cards contrast well on your peach container */
-    .container { background-color: #f8e1db; }
-  </style>
 </head>
 <body id="top">
   <div class="centered-title"><h1>Docs and Direction</h1></div>
@@ -84,71 +24,133 @@
     <h1>Resources</h1>
     <p>Curated books, blogs, and style guides that I use and recommend.</p>
 
-    <!-- Books -->
-    <details id="books" class="disclosure">
+    <!-- ========== BOOKS ========== -->
+    <details id="books" class="disclosure" open>
       <summary><span class="chev" aria-hidden="true"></span>Books I Recommend</summary>
 
-      <article class="resource-inner">
-        <h3>Docs Like Code (Anne Gentle)</h3>
-        <p><strong>What it offers:</strong> A practical playbook for treating documentation like software. It shows how version control, branching, reviews, CI, and automated checks make docs faster to ship and easier to maintain. The examples come from real teams moving from wiki or word processor workflows to a docs-as-code pipeline.</p>
-        <p><strong>What to expect:</strong></p>
-        <ul class="list-clean">
-          <li>Setting up a git-based doc workflow and bringing engineers into reviews</li>
-          <li>Static site generators, build pipelines, and checks for links and style</li>
-          <li>Rollout tips for change management and contributor onboarding</li>
-        </ul>
-        <p><em>Best for:</em> Technical writers, doc leads, and engineers starting a docs-as-code journey.</p>
-      </article>
+      <!--<!-- OPTION A: Collapsible per book (keep this OR the carousel below) -->
+     <!-- <section class="books-collapsible">
+        <details class="book-disclosure" open>
+          <summary><span class="chev" aria-hidden="true"></span>Docs Like Code (Anne Gentle)</summary>
+          <div class="resource-inner">
+            <p><strong>What it offers:</strong> A practical playbook for treating documentation like software. It shows how version control, branching, reviews, CI, and automated checks make docs faster to ship and easier to maintain. The examples come from real teams moving from wiki or word processor workflows to a docs-as-code pipeline.</p>
+            <p><strong>What to expect:</strong></p>
+            <ul class="list-clean">
+              <li>Setting up a git-based doc workflow and bringing engineers into reviews</li>
+              <li>Static site generators, build pipelines, and checks for links and style</li>
+              <li>Rollout tips for change management and contributor onboarding</li>
+            </ul>
+            <p><em>Best for:</em> Technical writers, doc leads, and engineers starting a docs-as-code journey.</p>
+          </div>
+        </details>
 
-      <article class="resource-inner">
-        <h3>The Product is Docs (Christopher Gales and the Splunk Documentation Team)</h3>
-        <p><strong>What it offers:</strong> Essays from a high-performing docs org on running documentation as a product. It covers hiring, team structure, content strategy, stakeholder management, SLAs, release readiness, quality, and metrics. The tone is candid and operational, which makes it easy to apply in real teams.</p>
-        <p><strong>What to expect:</strong></p>
-        <ul class="list-clean">
-          <li>Frameworks for planning, prioritization, and measuring impact</li>
-          <li>Career ladders, roles, and collaboration models with PM and Engineering</li>
-          <li>Patterns for voice, IA, and release gates that keep docs shippable</li>
-        </ul>
-        <p><em>Best for:</em> Leads and managers who need scalable practices, and ICs curious about how strong doc orgs operate.</p>
-      </article>
+        <details class="book-disclosure">
+          <summary><span class="chev" aria-hidden="true"></span>The Product is Docs (Christopher Gales and the Splunk Documentation Team)</summary>
+          <div class="resource-inner">
+            <p><strong>What it offers:</strong> Essays from a high-performing docs org on running documentation as a product. It covers hiring, team structure, content strategy, stakeholder management, SLAs, release readiness, quality, and metrics. The tone is candid and operational, which makes it easy to apply in real teams.</p>
+            <p><strong>What to expect:</strong></p>
+            <ul class="list-clean">
+              <li>Frameworks for planning, prioritization, and measuring impact</li>
+              <li>Career ladders, roles, and collaboration models with PM and Engineering</li>
+              <li>Patterns for voice, IA, and release gates that keep docs shippable</li>
+            </ul>
+            <p><em>Best for:</em> Leads and managers who need scalable practices, and ICs curious about how strong doc orgs operate.</p>
+          </div>
+        </details>
 
-      <article class="resource-inner">
-        <h3>Docs for Developers: An Engineer’s Field Guide to Technical Writing (Jared Bhatti, Zachary Sarah Corleissen, Jen Lambourne, David Nunez, Heidi Waterhouse)</h3>
-        <p><strong>What it offers:</strong> An engineer-friendly guide to creating developer documentation that users can follow. It breaks down doc types, audience analysis, API and tutorial patterns, sample code practices, and review workflows. The checklists and examples are concrete and easy to reuse.</p>
-        <p><strong>What to expect:</strong></p>
-        <ul class="list-clean">
-          <li>How to structure tutorials, how-to guides, concepts, and references</li>
-          <li>Techniques for clear code samples, error messaging, and troubleshooting</li>
-          <li>Editorial checklists, contribution models, and ways to gather feedback</li>
-        </ul>
-        <p><em>Best for:</em> Engineers who write, and technical writers partnering with dev teams on APIs and SDKs.</p>
-      </article>
+        <details class="book-disclosure">
+          <summary><span class="chev" aria-hidden="true"></span>Docs for Developers: An Engineer’s Field Guide to Technical Writing (Jared Bhatti, Zachary Sarah Corleissen, Jen Lambourne, David Nunez, Heidi Waterhouse)</summary>
+          <div class="resource-inner">
+            <p><strong>What it offers:</strong> An engineer-friendly guide to creating developer documentation that users can follow. It breaks down doc types, audience analysis, API and tutorial patterns, sample code practices, and review workflows. The checklists and examples are concrete and easy to reuse.</p>
+            <p><strong>What to expect:</strong></p>
+            <ul class="list-clean">
+              <li>How to structure tutorials, how-to guides, concepts, and references</li>
+              <li>Techniques for clear code samples, error messaging, and troubleshooting</li>
+              <li>Editorial checklists, contribution models, and ways to gather feedback</li>
+            </ul>
+            <p><em>Best for:</em> Engineers who write, and technical writers partnering with dev teams on APIs and SDKs.</p>
+          </div>
+        </details>
+      </section> -->
+
+      <!-- OPTION B: Carousel of book cards (use this instead of the collapsible section above) -->
+      
+      <section class="books-carousel-wrapper" aria-label="Book recommendations">
+        <button class="carousel-nav prev" aria-label="Scroll left" type="button">‹</button>
+        <div class="books-carousel" id="booksCarousel">
+          <article class="book-card">
+            <h3>Docs Like Code</h3>
+            <p class="byline">Anne Gentle</p>
+            <p><strong>What it offers:</strong> Treat docs like software with git, reviews, CI, and automated checks, so teams ship faster and maintain quality.</p>
+            <ul class="list-clean">
+              <li>Git-based doc workflow and engineer reviews</li>
+              <li>Static site generators and CI checks</li>
+              <li>Change management and contributor onboarding</li>
+            </ul>
+          </article>
+
+          <article class="book-card">
+            <h3>The Product is Docs</h3>
+            <p class="byline">Christopher Gales and the Splunk Documentation Team</p>
+            <p><strong>What it offers:</strong> How to run docs as a product with hiring, structure, strategy, SLAs, quality, and metrics that scale.</p>
+            <ul class="list-clean">
+              <li>Planning frameworks and impact metrics</li>
+              <li>Roles, ladders, and PM/Engineering collaboration</li>
+              <li>Voice, IA, and release gates for shippable docs</li>
+            </ul>
+          </article>
+
+          <article class="book-card">
+            <h3>Docs for Developers</h3>
+            <p class="byline">Bhatti, Corleissen, Lambourne, Nunez, Waterhouse</p>
+            <p><strong>What it offers:</strong> Practical patterns for developer docs, from doc types to API tutorials, code samples, and review workflows.</p>
+            <ul class="list-clean">
+              <li>Structure for tutorials, how-to, concepts, reference</li>
+              <li>Clear code samples and troubleshooting</li>
+              <li>Checklists, contribution models, and feedback loops</li>
+            </ul>
+          </article>
+        </div>
+        <button class="carousel-nav next" aria-label="Scroll right" type="button">›</button>
+      </section>
+      
     </details>
 
-    <!-- Blogs & Newsletters -->
+    <!-- ========== BLOGS ========== -->
     <details id="blogs" class="disclosure">
       <summary><span class="chev" aria-hidden="true"></span>Blogs and Newsletters</summary>
-      <article class="resource-inner link-list">
+      <div class="resource-inner link-list">
         <p><a href="https://idratherbewriting.com/" target="_blank" rel="noopener">I’d Rather Be Writing</a> by Tom Johnson. Long-form posts on API docs, career growth, and practical docs-as-code patterns.</p>
         <p><a href="https://www.everythingtechnicalwriting.com/" target="_blank" rel="noopener">Everything Technical Writing</a>. Curated essays and guides across UX writing, content design, and technical documentation.</p>
         <p><a href="https://clickhelp.com/clickhelp-technical-writing-blog/" target="_blank" rel="noopener">ClickHelp Technical Writing Blog</a>. Short, actionable reads on tools, workflows, and team practices.</p>
-      </article>
+      </div>
     </details>
 
-    <!-- Style Guides -->
+    <!-- ========== STYLE GUIDES ========== -->
     <details id="style-guides" class="disclosure">
       <summary><span class="chev" aria-hidden="true"></span>Style Guides</summary>
-      <article class="resource-inner link-list">
+      <div class="resource-inner link-list">
         <p><a href="https://learn.microsoft.com/style-guide/" target="_blank" rel="noopener">Microsoft Style Guide</a></p>
         <p><a href="https://developers.google.com/style" target="_blank" rel="noopener">Google Developer Style Guide</a></p>
         <p><a href="https://www.chicagomanualofstyle.org/home.html" target="_blank" rel="noopener">The Chicago Manual of Style</a></p>
-      </article>
+      </div>
     </details>
 
     <p class="back-top"><a href="#top">Back to top ↑</a></p>
-    <p><small><b>Note: I am not affiliated with the linked resources. I only list items I find genuinely useful.</small></p></b>
+    <p><small>Note: I am not affiliated with the linked resources. I only list items I find genuinely useful.</small></p>
   </div>
 
   <footer>© 2025 Docs and Direction. Built with clarity and caffeine.</footer>
+
+  <script>
+    // Carousel scroll (only applies if you use the carousel option)
+    const c = document.getElementById('booksCarousel');
+    document.querySelector('.books-carousel-wrapper .prev')?.addEventListener('click', () => {
+      if (!c) return; c.scrollBy({ left: -c.clientWidth, behavior: 'smooth' });
+    });
+    document.querySelector('.books-carousel-wrapper .next')?.addEventListener('click', () => {
+      if (!c) return; c.scrollBy({ left: c.clientWidth, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>

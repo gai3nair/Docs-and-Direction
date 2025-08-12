@@ -6,54 +6,9 @@
   <title>Docs and Direction — Resources</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Minimal additions for chips + collapsible cards -->
+  <!-- Minimal styles for collapsible cards and clean lists -->
   <style>
     html { scroll-behavior: smooth; }
-
-    /* TOC container */
-    .page-toc {
-      background: #fff;
-      border: 1px solid rgba(0,0,0,0.06);
-      border-radius: 16px;
-      padding: 14px;
-      margin: 20px 0 28px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-    }
-    .toc-header {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 12px; margin-bottom: 10px;
-    }
-    .toggles { display: flex; gap: 8px; }
-    .toggles button {
-      cursor: pointer; border: 1px solid rgba(0,0,0,0.12);
-      background: #fff; padding: 6px 10px; border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    /* Chip carousel */
-    .toc-carousel { display: flex; align-items: center; gap: 8px; }
-    .toc-nav {
-      border: 1px solid rgba(0,0,0,0.12); background: #fff;
-      width: 32px; height: 32px; border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer;
-    }
-    .chips {
-      display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch; padding: 4px; scrollbar-width: none;
-      flex: 1 1 auto;
-    }
-    .chips::-webkit-scrollbar { display: none; }
-
-    .chip {
-      flex: 0 0 auto; scroll-snap-align: start;
-      text-decoration: none; color: inherit;
-      border: 1px solid rgba(0,0,0,0.12);
-      padding: 8px 12px; border-radius: 999px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      background: #fff;
-      white-space: nowrap;
-    }
-    .chip:focus, .chip:hover { outline: none; border-color: rgba(0,0,0,0.3); }
 
     /* Collapsible soft cards */
     details.disclosure {
@@ -88,12 +43,17 @@
 
     .resource-inner { padding: 0 20px 16px 20px; }
     .resource-inner + .resource-inner {
-      border-top: 1px dashed rgba(0,0,0,0.12); padding-top: 16px;
+      border-top: 1px dashed rgba(0,0,0,0.12);
+      padding-top: 16px;
     }
 
-    /* Bulletless link lists for clean look */
-    .link-list { list-style: none; margin: 0; padding-left: 0; }
-    .link-list li { margin: 6px 0; }
+    /* Clean lists (no bullets) */
+    .list-clean { list-style: none; padding-left: 0; margin: 8px 0; }
+    .list-clean li { margin: 6px 0; }
+
+    /* Inline link list items */
+    .link-list { margin: 0; }
+    .link-list p { margin: 6px 0; }
 
     /* Back to top */
     .back-top { text-align: right; margin: 18px 0 28px; }
@@ -101,6 +61,9 @@
       text-decoration: none; border-bottom: 1px dashed rgba(0,0,0,0.25);
     }
     .back-top a:hover { border-bottom-style: solid; }
+
+    /* Ensure cards contrast well on your peach container */
+    .container { background-color: #f8e1db; }
   </style>
 </head>
 <body id="top">
@@ -119,33 +82,7 @@
 
   <div class="container">
     <h1>Resources</h1>
-    <p>Curated books, blogs, guides, templates, and tools that I use and recommend.</p>
-
-    <!-- On this page / Chip carousel -->
-    <nav class="page-toc" role="navigation" aria-label="On this page">
-      <div class="toc-header">
-        <strong>On this page</strong>
-        <div class="toggles">
-          <button id="expandAll" type="button">Expand all</button>
-          <button id="collapseAll" type="button">Collapse all</button>
-        </div>
-      </div>
-
-      <div class="toc-carousel">
-        <button class="toc-nav prev" aria-label="Scroll left" type="button">‹</button>
-        <div class="chips" id="tocChips" tabindex="0">
-          <a class="chip" href="#books">Books I Recommend</a>
-          <a class="chip" href="#blogs">Blogs & Newsletters</a>
-          <a class="chip" href="#style-guides">Style Guides</a>
-          <a class="chip" href="#templates">Templates & Checklists</a>
-          <a class="chip" href="#tools">Tools I Use</a>
-          <a class="chip" href="#talks">Talks & Courses</a>
-          <a class="chip" href="#communities">Communities</a>
-          <a class="chip" href="#new-tw">For New Technical Writers</a>
-        </div>
-        <button class="toc-nav next" aria-label="Scroll right" type="button">›</button>
-      </div>
-    </nav>
+    <p>Curated books, blogs, and style guides that I use and recommend.</p>
 
     <!-- Books -->
     <details id="books" class="disclosure" open>
@@ -153,10 +90,10 @@
 
       <article class="resource-inner">
         <h3>Docs Like Code (Anne Gentle)</h3>
-        <p><strong>What it offers:</strong> A practical playbook for treating documentation like software. It shows how version control, branching, reviews, CI, and automated checks make docs faster to ship and easier to maintain. The examples are grounded in real teams moving from wiki or word processor workflows to a docs-as-code pipeline.</p>
+        <p><strong>What it offers:</strong> A practical playbook for treating documentation like software. It shows how version control, branching, reviews, CI, and automated checks make docs faster to ship and easier to maintain. The examples come from real teams moving from wiki or word processor workflows to a docs-as-code pipeline.</p>
         <p><strong>What to expect:</strong></p>
-        <ul class="link-list">
-          <li>How to set up a git-based doc workflow and bring engineers into reviews</li>
+        <ul class="list-clean">
+          <li>Setting up a git-based doc workflow and bringing engineers into reviews</li>
           <li>Static site generators, build pipelines, and checks for links and style</li>
           <li>Rollout tips for change management and contributor onboarding</li>
         </ul>
@@ -165,40 +102,15 @@
 
       <article class="resource-inner">
         <h3>The Product is Docs (Christopher Gales and the Splunk Documentation Team)</h3>
-        <p><strong>What it offers:</strong> Essays from a high-performing docs org on how to run documentation as a product. It covers hiring, team structure, content strategy, stakeholder management, SLAs, release readiness, quality, and metrics. The tone is candid and operational, which makes it easy to apply in real teams.</p>
+        <p><strong>What it offers:</strong> Essays from a high-performing docs org on running documentation as a product. It covers hiring, team structure, content strategy, stakeholder management, SLAs, release readiness, quality, and metrics. The tone is candid and operational, which makes it easy to apply in real teams.</p>
         <p><strong>What to expect:</strong></p>
-        <ul class="link-list">
+        <ul class="list-clean">
           <li>Frameworks for planning, prioritization, and measuring impact</li>
           <li>Career ladders, roles, and collaboration models with PM and Engineering</li>
           <li>Patterns for voice, IA, and release gates that keep docs shippable</li>
         </ul>
-        <p><em>Best for:</em> Leads and managers who need scalable practices, plus ICs curious about how strong doc orgs operate.</p>
+        <p><em>Best for:</em> Leads and managers who need scalable practices, and ICs curious about how strong doc orgs operate.</p>
       </article>
 
       <article class="resource-inner">
-        <h3>Docs for Developers: An Engineer’s Field Guide to Technical Writing (Jared Bhatti, Zachary Sarah Corleissen, Jen Lambourne, David Nunez, Heidi Waterhouse)</h3>
-        <p><strong>What it offers:</strong> A clear, engineer-friendly guide to writing developer documentation that users can follow. It breaks down doc types, audience analysis, API and tutorial patterns, sample code practices, and review workflows. The checklists and examples are concrete and easy to reuse.</p>
-        <p><strong>What to expect:</strong></p>
-        <ul class="link-list">
-          <li>How to structure tutorials, how-to guides, concepts, and references</li>
-          <li>Techniques for good code samples, error messaging, and troubleshooting</li>
-          <li>Editorial checklists, contribution models, and ways to gather feedback</li>
-        </ul>
-        <p><em>Best for:</em> Engineers who write, and technical writers partnering with dev teams on APIs and SDKs.</p>
-      </article>
-    </details>
-
-    <!-- Blogs -->
-    <details id="blogs" class="disclosure">
-      <summary><span class="chev" aria-hidden="true"></span>Blogs & Newsletters</summary>
-      <article class="resource-inner">
-        <p>I am curating a short list of blogs and newsletters that offer consistent, actionable insights in technical writing, content design, and leadership.</p>
-      </article>
-    </details>
-
-    <!-- Style Guides -->
-    <details id="style-guides" class="disclosure">
-      <summary><span class="chev" aria-hidden="true"></span>Style Guides</summary>
-      <article class="resource-inner">
-        <ul class="link-list">
-          <li><a href="https://learn
+        <h3>Docs for Developers: An Engineer’s Field Guide to Technical Writin

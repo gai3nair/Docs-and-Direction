@@ -37,3 +37,97 @@
           <li>Article 1</li>
           <li>Article 2</li>
           <li>Article 3</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Strategy -->
+    <details class="category">
+      <summary>Strategy</summary>
+      <div class="content">
+        <ul class="list-clean">
+          <li>Article 1</li>
+          <li>Article 2</li>
+          <li>Article 3</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Leadership -->
+    <details class="category">
+      <summary>Leadership</summary>
+      <div class="content">
+        <ul class="list-clean">
+          <li>Article 1</li>
+          <li>Article 2</li>
+          <li>Article 3</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- UX Writing -->
+    <details class="category">
+      <summary>UX Writing</summary>
+      <div class="content">
+        <ul class="list-clean">
+          <li>Article 1</li>
+          <li>Article 2</li>
+          <li>Article 3</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- AI -->
+    <details class="category">
+      <summary>AI</summary>
+      <div class="content">
+        <ul class="list-clean">
+          <li>Article 1</li>
+          <li>Article 2</li>
+          <li>Article 3</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="back-top"><a href="#top">Back to top ↑</a></div>
+  </div>
+
+  <footer>
+    © 2025 Docs and Direction. Built with clarity and caffeine.
+  </footer>
+
+  <!-- Smooth accordion animation -->
+  <script>
+    document.querySelectorAll('details.category').forEach((d) => {
+      const content = d.querySelector('.content');
+      if (!content) return;
+
+      // Set initial height
+      if (d.open) {
+        content.style.height = 'auto';
+      } else {
+        content.style.height = '0px';
+      }
+
+      d.addEventListener('toggle', () => {
+        if (d.open) {
+          // Expand: from fixed height to auto
+          content.style.height = content.scrollHeight + 'px';
+          const onEnd = () => {
+            content.style.height = 'auto';
+            content.removeEventListener('transitionend', onEnd);
+          };
+          content.addEventListener('transitionend', onEnd);
+        } else {
+          // Collapse: from auto to 0 (set current pixel height first)
+          const current = content.scrollHeight;
+          content.style.height = current + 'px';
+          requestAnimationFrame(() => {
+            content.style.height = '0px';
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

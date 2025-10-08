@@ -22,179 +22,43 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- sticky jump nav (alphabetical A → L → S → U → W) -->
-  <div class="category-nav" aria-label="Category navigation">
-    <div class="container">
-      <strong>Categories:</strong>
-      <a href="#ai">AI</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#strategy">Strategy</a>
-      <a href="#ux-writing">UX Writing</a>
-      <a href="#writing">Writing</a>
-    </div>
-  </div>
-
   <div class="container">
     <h2>Blog</h2>
     <p class="blog-intro">
       Insights from my journey in Technical Writing — and how Strategy, Leadership, UX Writing, and AI shape the craft.
     </p>
 
-    <!-- Search -->
-    <div class="searchbar" role="search">
-      <input id="searchInput" type="search" placeholder="Search posts (title or summary)..." aria-label="Search blog posts"/>
-    </div>
+    <!-- Categories with placeholders only -->
+    <h3 id="ai">AI</h3>
+    <ul class="list-clean">
+      <li><em>Articles coming soon…</em></li>
+    </ul>
 
-    <!-- CATEGORY: AI -->
-    <details class="blog-accordion" id="ai" data-category="ai">
-      <summary class="blog-summary">
-        <span class="cat-pill"><span class="dot dot-ai"></span> AI</span>
-        <span class="count" aria-live="polite"></span>
-      </summary>
-      <div class="post-list">
-        <article class="blog-card" data-tags="ai,technical-writing,process">
-          <h4><a href="posts/harnessing-ai-in-docs.html">Harnessing AI in Documentation Workflows</a></h4>
-          <p class="post-meta">Published: Sep 22, 2025 • 6 min read • Topics: AI, Process</p>
-          <p>How review agents and prompt patterns improve consistency without adding bottlenecks to docs-as-code pipelines.</p>
-          <div class="tags"><span class="tag">AI</span><span class="tag">Process</span><span class="tag">Technical Writing</span></div>
-        </article>
+    <h3 id="leadership">Leadership</h3>
+    <ul class="list-clean">
+      <li><em>Articles coming soon…</em></li>
+    </ul>
 
-        <article class="blog-card" data-tags="ai,ux-writing,style-guides">
-          <h4><a href="posts/microcopy-with-ai.html">Designing Safer Microcopy with AI Assist</a></h4>
-          <p class="post-meta">Published: Aug 30, 2025 • 5 min read • Topics: AI, UX Writing</p>
-          <p>Risk-aware prompts that help you flag vague terms, unexplained acronyms, and false positives before release.</p>
-          <div class="tags"><span class="tag">AI</span><span class="tag">UX Writing</span><span class="tag">Style Guides</span></div>
-        </article>
-      </div>
-    </details>
+    <h3 id="strategy">Strategy</h3>
+    <ul class="list-clean">
+      <li><em>Articles coming soon…</em></li>
+    </ul>
 
-    <!-- CATEGORY: Leadership -->
-    <details class="blog-accordion" id="leadership" data-category="leadership">
-      <summary class="blog-summary">
-        <span class="cat-pill"><span class="dot dot-leadership"></span> Leadership</span>
-        <span class="count" aria-live="polite"></span>
-      </summary>
-      <div class="post-list">
-        <article class="blog-card" data-tags="leadership,process,career">
-          <h4><a href="posts/mentoring-in-sprints.html">Mentoring in Sprints: Coaching Writers Without Slowing Delivery</a></h4>
-          <p class="post-meta">Published: Sep 28, 2025 • 5 min read • Topics: Leadership, Process</p>
-          <p>Micro-mentoring inside agile sprints — pairing reviews, rule-of-three feedback, and calm checklists.</p>
-          <div class="tags"><span class="tag">Leadership</span><span class="tag">Process</span><span class="tag">Career</span></div>
-        </article>
+    <h3 id="ux-writing">UX Writing</h3>
+    <ul class="list-clean">
+      <li><em>Articles coming soon…</em></li>
+    </ul>
 
-        <article class="blog-card" data-tags="leadership,team,communication">
-          <h4><a href="posts/leading-with-clarity.html">Leading with Clarity: Setting Writing Standards that Stick</a></h4>
-          <p class="post-meta">Published: Aug 12, 2025 • 6 min read • Topics: Leadership, Communication</p>
-          <p>From ad-hoc edits to durable standards: patterns for team alignment and kinder reviews.</p>
-          <div class="tags"><span class="tag">Leadership</span><span class="tag">Standards</span><span class="tag">Communication</span></div>
-        </article>
-      </div>
-    </details>
+    <h3 id="writing">Writing</h3>
+    <ul class="list-clean">
+      <li><em>Articles coming soon…</em></li>
+    </ul>
 
-    <!-- CATEGORY: Strategy -->
-    <details class="blog-accordion" id="strategy" data-category="strategy">
-      <summary class="blog-summary">
-        <span class="cat-pill"><span class="dot dot-strategy"></span> Strategy</span>
-        <span class="count" aria-live="polite"></span>
-      </summary>
-      <div class="post-list">
-        <article class="blog-card" data-tags="strategy,docs-as-code,governance">
-          <h4><a href="posts/content-strategy-evolution.html">Content Strategy Evolution in the Docs-as-Code Era</a></h4>
-          <p class="post-meta">Published: Sep 12, 2025 • 7 min read • Topics: Strategy, Docs-as-Code</p>
-          <p>Adapting content design and governance models to meet CI/CD velocity without sacrificing clarity.</p>
-          <div class="tags"><span class="tag">Strategy</span><span class="tag">Docs-as-Code</span><span class="tag">Governance</span></div>
-        </article>
-
-        <article class="blog-card" data-tags="strategy,metrics,analytics">
-          <h4><a href="posts/metrics-that-matter.html">Metrics that Matter: From Pageviews to Task Success</a></h4>
-          <p class="post-meta">Published: Aug 03, 2025 • 6 min read • Topics: Strategy, Analytics</p>
-          <p>Shifting from vanity metrics to actionable insights that guide prioritization and product UX.</p>
-          <div class="tags"><span class="tag">Strategy</span><span class="tag">Analytics</span></div>
-        </article>
-      </div>
-    </details>
-
-    <!-- CATEGORY: UX Writing -->
-    <details class="blog-accordion" id="ux-writing" data-category="ux-writing">
-      <summary class="blog-summary">
-        <span class="cat-pill"><span class="dot dot-ux"></span> UX Writing</span>
-        <span class="count" aria-live="polite"></span>
-      </summary>
-      <div class="post-list">
-        <article class="blog-card" data-tags="ux-writing,style-guides,readability">
-          <h4><a href="posts/designing-microcopy.html">Designing Microcopy That Prevents Errors</a></h4>
-          <p class="post-meta">Published: Sep 05, 2025 • 7 min read • Topics: UX Writing, Readability</p>
-          <p>From empty-state to error-state: phrasing patterns that reduce support tickets and improve recovery.</p>
-          <div class="tags"><span class="tag">UX Writing</span><span class="tag">Readability</span><span class="tag">Style Guides</span></div>
-        </article>
-      </div>
-    </details>
-
-    <!-- CATEGORY: Writing -->
-    <details class="blog-accordion" id="writing" data-category="writing" open>
-      <summary class="blog-summary">
-        <span class="cat-pill"><span class="dot dot-writing"></span> Writing</span>
-        <span class="count" aria-live="polite"></span>
-      </summary>
-      <div class="post-list">
-        <article class="blog-card" data-tags="writing,technical-writing,style-guides,ux-writing">
-          <h4><a href="posts/acronym-initialism-abbreviation.html">When “API” Met “Dr.” — Acronyms, Initialisms & Abbreviations</a></h4>
-          <p class="post-meta">Published: Oct 7, 2025 • 6 min read • Topics: Writing, Style Guides</p>
-          <p>A mentoring story that clarifies why acronyms and initialisms aren’t the same — and how to introduce them well.</p>
-          <div class="tags"><span class="tag">Writing</span><span class="tag">Style Guides</span><span class="tag">UX Writing</span></div>
-        </article>
-      </div>
-    </details>
-
-    <p class="empty-state" id="emptyState">No posts found. Try a different search.</p>
     <div class="back-top"><a href="#top">Back to top ↑</a></div>
   </div>
 
   <footer>
     © 2025 Docs and Direction. Built with clarity and caffeine.
   </footer>
-
-  <script>
-    // Search posts (preserve categories; hide category if all posts hidden)
-    const q = document.getElementById('searchInput');
-    const sections = [...document.querySelectorAll('.blog-accordion')];
-    const cards = [...document.querySelectorAll('.blog-card')];
-    const emptyState = document.getElementById('emptyState');
-
-    function updateCounts() {
-      sections.forEach(sec => {
-        const visible = [...sec.querySelectorAll('.blog-card')]
-          .filter(c => c.style.display !== 'none').length;
-        const countEl = sec.querySelector('.count');
-        if (countEl) countEl.textContent = visible ? `(${visible})` : '(0)';
-      });
-    }
-
-    function applySearch() {
-      const txt = (q.value || '').toLowerCase().trim();
-      let totalVisible = 0;
-
-      cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
-        const show = !txt || text.includes(txt);
-        card.style.display = show ? '' : 'none';
-        if (show) totalVisible++;
-      });
-
-      sections.forEach(sec => {
-        const anyVisible = [...sec.querySelectorAll('.blog-card')]
-          .some(c => c.style.display !== 'none');
-        sec.style.display = anyVisible ? '' : 'none';
-        // If a section has results but is collapsed, keep user control—don’t auto-open or close.
-      });
-
-      emptyState.style.display = totalVisible ? 'none' : 'block';
-      updateCounts();
-    }
-
-    // init
-    updateCounts();
-    q.addEventListener('input', applySearch);
-  </script>
 </body>
 </html>

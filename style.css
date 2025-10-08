@@ -508,4 +508,51 @@ details.disclosure[open] .chev { transform: rotate(0deg); }
 }
 
 
+/* Collapsible categories */
+details.category {
+  margin: 1.2em 0;
+  border: 1px solid #d9d4cc;
+  border-radius: 10px;
+  background: #fffaf2; /* matches your peach container vibe */
+  padding: 0.25rem 0.9rem;
+}
+
+details.category summary {
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+  padding: 0.6rem 0.2rem;
+}
+
+/* Custom marker */
+details.category summary::-webkit-details-marker { display: none; }
+details.category summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 200ms ease;
+}
+details.category[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details.category .content {
+  overflow: hidden;
+  height: 0; /* JS will manage exact height values */
+  transition: height 280ms ease;
+}
+
+details.category ul {
+  margin: 0.4rem 0 0.8rem 1.2rem;
+  padding-left: 0;
+}
+
+details.category li {
+  margin: 0.3rem 0;
+}
+
+
+
 

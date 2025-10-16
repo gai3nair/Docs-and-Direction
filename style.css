@@ -575,5 +575,39 @@ article p { margin: 1em 0; }
   border-radius:999px;
 }
 
+/* ====== Single post card + readable content ====== */
+.post {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  padding: 18px 20px;
+  margin-top: 16px;
+}
+
+/* Links inside article content */
+.post a {
+  color: #c44569;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(0,0,0,0.25);
+}
+.post a:hover { border-bottom-style: solid; }
+
+/* Images inside posts scale nicely */
+.post img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Tweak blockquote to stand out on the peach container */
+.post blockquote {
+  background: #fff8f8;
+  border-left: 4px solid #f3a7b7;
+  padding: 10px 14px;
+  margin: 18px 0;
+  font-style: italic;
+  color: #444;
+}
 
 

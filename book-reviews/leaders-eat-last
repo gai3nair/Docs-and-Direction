@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leaders Eat Last — Book Review • Docs and Direction</title>
+  <meta name="description" content="Book review of Simon Sinek’s Leaders Eat Last — Why Some Teams Pull Together and Others Don’t, with takeaways on trust, biology, and the Circle of Safety."/>
+  <!-- Use the shared site stylesheet from project root -->
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body id="top">
+  <!-- Site title -->
+  <div class="centered-title">
+    <h1>Docs and Direction</h1>
+  </div>
+
+  <!-- Primary nav (paths are relative to /book-reviews/) -->
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../resources.html">Resources</a>
+    <a href="../career-education.html">Career &amp; Education</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- Breadcrumbs to match your blog style -->
+    <p class="breadcrumb">
+      <a href="../resources.html">Resources</a> › Book Reviews › Leaders Eat Last
+    </p>
+
+    <!-- Title block -->
+    <h1>Book Review: <em>Leaders Eat Last — Why Some Teams Pull Together and Others Don’t</em></h1>
+    <p class="post-meta">By Gayatri R. Nair • 6–7 min read • Category: Leadership</p>
+
+    <!-- Author line for the book -->
+    <p><strong>By Simon Sinek</strong></p>
+
+    <!-- Opening quote -->
+    <blockquote>
+      “If your actions inspire others to dream more, learn more, do more and become more, you are a leader.” — John Quincy Adams
+    </blockquote>
+
+    <!-- Review body (your text, preserved) -->
+    <p>
+      Picture a Marine mess hall at dusk. The air hums with quiet discipline. Junior soldiers line up for dinner, while the senior officers stand patiently at the back. No orders are spoken, no eyes roll. It’s simply how things are done: the juniors eat first, and the leaders eat last.
+    </p>
+    <p>
+      This small ritual captured Simon Sinek’s imagination and became the soul of his book. In the United States Marine Corps, leaders eat last not to display authority but to demonstrate service. It’s an unspoken pact that says, I’ll put your needs before mine, because your safety and well-being come first. From that simple truth, Sinek builds a powerful philosophy: great leadership is less about power and more about protection.
+    </p>
+    <p>
+      <em>Leaders Eat Last</em> begins where most leadership books end, at the dinner table of humanity. Sinek weaves together stories from the military, corporate corridors, and even anthropology to show how trust and empathy are the real fuel of thriving teams. Through vivid accounts, such as a pilot risking his life for his unit or a CEO dismantling factory fences to build trust, he proves that when people feel safe, they don’t just work harder; they work together.
+    </p>
+    <p>
+      What makes this book magnetic is its balance of science and soul. Sinek explains that chemicals such as serotonin, oxytocin, endorphins, and dopamine drive our behavior, and that these once helped early humans survive predators. Today, they can help organizations survive chaos. When leaders prioritize their teams’ emotional security, these “feel-safe” hormones kick in, turning workplaces into ecosystems of cooperation. But when fear rules, the chemistry changes. Cortisol, a stress hormone, takes over, and people retreat, compete, and burn out.
+    </p>
+    <p>
+      The title <em>Leaders Eat Last</em> is both a metaphor and a manifesto. It challenges the corporate obsession with short-term metrics and reminds us that leadership, at its core, is biological, ethical, and deeply human. True leaders, Sinek argues, are those who build a “Circle of Safety,” an environment where people trust one another, innovate without fear, and believe their leaders would sacrifice for them, not the other way around.
+    </p>
+    <p>
+      Reading this book feels like rediscovering what leadership was always meant to be, an act of empathy that inspires courage. It is not a management manual; it is a mirror that reflects how our instincts for care and belonging can transform organizations and lives.
+    </p>
+    <p>
+      In a world where leadership often sounds like strategy and looks like hierarchy, <em>Leaders Eat Last</em> whispers a different truth: the best leaders are those who make others feel safe enough to lead too.
+    </p>
+    <p>
+      If you wish to understand not just how teams succeed, but why they stay together, let Sinek’s stories remind you that the measure of a leader isn’t in how high they climb, but in how many they lift along the way.
+    </p>
+
+    <!-- Gentle CTA consistent with your Resources vs Blog split -->
+    <details class="disclosure book-disclosure">
+      <summary><span class="chev" aria-hidden="true"></span> Would you like to know why I find this book a worthy read?</summary>
+      <div class="resource-inner">
+        <p>
+          This review sits under <a href="../resources.html">Resources</a> so you can quickly find recommended reads. For opinion-led pieces, visit the <a href="../blog.html">Blog</a>. If you’d like a spoken-review version, let me know and I’ll add an audio cut soon.
+        </p>
+      </div>
+    </details>
+
+     <footer>
+    © 2025 Docs and Direction. Built with clarity and caffeine.
+  </footer>
+</body>
+</html>

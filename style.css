@@ -632,3 +632,27 @@ article p { margin: 1em 0; }
   opacity: 0.85;
 }
 
+/* --- Contact Page Profile Styles --- */
+
+.profile-contact {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* circular */
+  object-fit: cover;
+  border: 3px solid #fff; /* soft frame */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
+.profile-text p {
+  margin-top: 0;
+}
+

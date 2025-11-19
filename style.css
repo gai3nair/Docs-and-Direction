@@ -691,39 +691,39 @@ article p { margin: 1em 0; }
   }
 }
 
-/* --- Floating profile photo in upper right --- */
+/* --- Contact Page Layout with Right-Side Circular Image --- */
 
-.profile-wrapper {
-  position: relative;
-  padding-top: 20px;
+.profile-contact.right-image-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;   /* 👈 keeps image at the top, not vertically centered */
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
-/* Photo floats inside the container, top-right */
-.profile-photo-floating {
-  position: absolute;
-  top: 0;
-  right: 0;
+.profile-photo-small {
   width: 110px;
   height: 110px;
-  border-radius: 50%;
+  border-radius: 50%;        /* circle */
   object-fit: cover;
   border: 3px solid #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  flex-shrink: 0;
 }
 
-/* Add breathing room so text doesn’t touch the photo */
 .profile-text {
-  padding-right: 140px; /* Space for the floating image */
+  flex: 1;
+  min-width: 250px;
 }
 
-/* Responsive fix: image moves below text on phones */
-@media (max-width: 650px) {
-  .profile-photo-floating {
-    position: static;
-    display: block;
-    margin: 0 auto 20px;
+/* Mobile: stack text + photo nicely */
+@media (max-width: 600px) {
+  .profile-contact.right-image-layout {
+    flex-direction: column-reverse;
+    text-align: left;
   }
-  .profile-text {
-    padding-right: 0;
+  .profile-photo-small {
+    margin: 0 auto 10px;
   }
 }
+
